@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .area{
+    border: 1px solid #ccc;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .float div{
+    width: 200px;
+    height: 500px;
+    background-color: antiquewhite;
+    float: left;
+  }
+  .height{
+    overflow: hidden;
+  }
+  .height p{
+    background-color: aquamarine;
+    margin: 10px 0;
+  }
+</style>
+<body>
+  <div>
+    <!-- 清除浮动 解决高度塌陷 -->
+    <div class="area float">
+      <div class="block-1"></div>
+      <div class="block-2"></div>
+    </div>
+    <!-- 解决高度合并问题 -->
+    <div class="area height">
+      <p>11111</p>
+      <p>22222</p>
+    </div>
+  </div>
+</body>
+</html>
